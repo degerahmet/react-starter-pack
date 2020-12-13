@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 //import {alertify} from "alertifyjs";
 
 class App extends Component {
@@ -23,13 +23,12 @@ class App extends Component {
   }
 }
 
-export default App;
 
 
-// function mapStateToProps(state){
-//   return {
-//       data:state.changeDataReducer
-//   }
-// }
+function mapStateToProps(state){
+  return {
+      data:state.exampleActionReducer
+  }
+};
 
-// export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(App);
